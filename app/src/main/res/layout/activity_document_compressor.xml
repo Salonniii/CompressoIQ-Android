@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#0F172A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <ImageButton
+                android:id="@+id/btnBackDocument"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:background="@drawable/chip_bg"
+                android:padding="10dp"
+                android:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📂 Document Compressor"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PDF • Word • PPT • Excel"
+                    android:textSize="14sp"
+                    android:textColor="#B8C1EC"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FILE PICKER CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_result_card"
+            android:padding="18dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnPickDocument"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="📁 Select Document"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/bg_button_premium" />
+
+            <TextView
+                android:id="@+id/tvSelectedDocument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📁 No file selected"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="14dp" />
+        </LinearLayout>
+
+        <!-- TARGET SIZE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_result_card"
+            android:padding="18dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Compression Settings"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/etTargetSizeDocument"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Enter target size (KB)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#C9B6FF"
+                android:inputType="number"
+                android:background="@drawable/bg_input_premium"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 Quick Target Sizes"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnPreset50"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="50KB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp" />
+
+                    <Button
+                        android:id="@+id/btnPreset100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="100KB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp" />
+
+                    <Button
+                        android:id="@+id/btnPreset200"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="200KB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp" />
+
+                    <Button
+                        android:id="@+id/btnPreset300"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="300KB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/btnCompressDocument"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:text="🚀 Compress Document"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:background="@drawable/bg_button_premium"
+                android:layout_marginTop="18dp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnDocumentHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📄 View Document History"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#6D28D9"
+            android:textColor="@android:color/white" />
+
+        <!-- RESULT CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#1E0B4B"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvDocumentResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📄 Compression result will appear here"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="6dp" />
+
+                <Button
+                    android:id="@+id/btnDownloadDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="⬇️ Download to Downloads"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_button_premium"
+                    android:layout_marginTop="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:id="@+id/btnShareWhatsapp"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="💬 WhatsApp"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="6dp" />
+
+                    <Button
+                        android:id="@+id/btnShareGmail"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="📧 Gmail"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/btnShareInstagram"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="📸 Instagram"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="6dp" />
+
+                    <Button
+                        android:id="@+id/btnShareMore"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="📤 More"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

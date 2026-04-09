@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#1E0B4B">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- IMAGE -->
+        <ImageView
+            android:id="@+id/ivHistoryImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_input_premium"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compressed Image"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- DETAILS -->
+        <TextView
+            android:id="@+id/tvOriginalSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Original: 0 KB"
+            android:textColor="#E2E8F0"
+            android:textSize="15sp"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvCompressedSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compressed: 0 KB"
+            android:textColor="#E2E8F0"
+            android:textSize="15sp"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode: FORM_UPLOAD"
+            android:textColor="#E2E8F0"
+            android:textSize="15sp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- ACTION BUTTON ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnDownload"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="⬇ Download"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_premium"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="📤 Share"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_premium"
+                android:layout_marginStart="6dp"/>
+
+        </LinearLayout>
+
+        <!-- DELETE BUTTON -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="🗑 Delete from History"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button_premium"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

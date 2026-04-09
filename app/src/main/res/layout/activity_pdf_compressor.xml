@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1020">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/btnBackPdf"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="@android:color/transparent"
+            android:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📄 PDF Compressor"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compress PDFs smartly while keeping quality readable ✨"
+            android:textColor="#CFCFFF"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnPickPdf"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📂 Select PDF"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button_premium" />
+
+        <TextView
+            android:id="@+id/tvPdfName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No PDF selected"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/etTargetPdfSize"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="🎯 Enter target size in KB"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3FFFFFF"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_input_premium"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btnPdf50"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="50 KB"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_premium"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnPdf100"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="100 KB"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_premium"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnPdf200"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="200 KB"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_premium"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/btnPdf300"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="300 KB"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_premium"/>
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerPdfMode"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_spinner"
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/btnCompressPdf"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="⚡ Compress PDF"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_premium" />
+
+        <!-- RESULT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="18dp"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 Compression Result"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvPdfOriginalSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Original Size: --"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="14dp" />
+
+            <TextView
+                android:id="@+id/tvPdfCompressedSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compressed Size: --"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvPdfSaved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saved: --"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvPdfScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Score: --"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnDownloadPdf"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="⬇ Save PDF to Downloads"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_premium"/>
+
+            <Button
+                android:id="@+id/btnShareWhatsAppPdf"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="📲 Share to WhatsApp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_button_premium"/>
+
+            <Button
+                android:id="@+id/btnShareInstagramPdf"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="📸 Share to Instagram"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_button_premium"/>
+
+            <Button
+                android:id="@+id/btnShareEmailPdf"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="📧 Share via Email"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_button_premium"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
