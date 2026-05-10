@@ -330,7 +330,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn10KB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="10KB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp"/>
 
+                    <Button
+                        android:id="@+id/btn20KB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="20KB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp"/>
                     <Button
                         android:id="@+id/btn50KB"
                         android:layout_width="wrap_content"

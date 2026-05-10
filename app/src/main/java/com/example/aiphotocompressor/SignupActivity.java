@@ -18,7 +18,7 @@ import retrofit2.Response;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private EditText etFullName, etEmail, etPhone, etFPassword;
+    private EditText etFullName, etEmail, etPhone, etPassword;
     private Button btnSignupSubmit;
     private TextView tvGoToLogin;
 

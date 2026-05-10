@@ -33,7 +33,18 @@ public class DocumentCompressorActivity extends AppCompatActivity {
     private EditText etTargetSizeDocument;
     private Button btnDocumentHistory;
     private Button btnPickDocument, btnCompressDocument;
-    private Button btnPreset50, btnPreset100, btnPreset200, btnPreset300;
+    private Button btnPreset50,
+            btnPreset100,
+            btnPreset200,
+            btnPreset300,
+            btnPreset500,
+            btnPreset1MB;
+
+    private Button btnEmailReady,
+            btnResume,
+            btnAssignment,
+            btnPresentation,
+            btnUltraCompress;
     private Button btnDownloadDocument, btnShareWhatsapp, btnShareGmail, btnShareInstagram, btnShareMore;
     private TextView tvSelectedDocument, tvDocumentResult;
     private ImageButton btnBackDocument;
@@ -72,35 +83,99 @@ public class DocumentCompressorActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        etTargetSizeDocument = findViewById(R.id.etTargetSizeDocument);
 
-        btnPickDocument = findViewById(R.id.btnPickDocument);
-        btnCompressDocument = findViewById(R.id.btnCompressDocument);
-        btnDocumentHistory = findViewById(R.id.btnDocumentHistory);
+        etTargetSizeDocument =
+                findViewById(R.id.etTargetSizeDocument);
 
-        btnPreset50 = findViewById(R.id.btnPreset50);
-        btnPreset100 = findViewById(R.id.btnPreset100);
-        btnPreset200 = findViewById(R.id.btnPreset200);
-        btnPreset300 = findViewById(R.id.btnPreset300);
+        btnPickDocument =
+                findViewById(R.id.btnPickDocument);
 
-        btnDownloadDocument = findViewById(R.id.btnDownloadDocument);
-        btnShareWhatsapp = findViewById(R.id.btnShareWhatsapp);
-        btnShareGmail = findViewById(R.id.btnShareGmail);
-        btnShareInstagram = findViewById(R.id.btnShareInstagram);
-        btnShareMore = findViewById(R.id.btnShareMore);
+        btnCompressDocument =
+                findViewById(R.id.btnCompressDocument);
 
-        tvSelectedDocument = findViewById(R.id.tvSelectedDocument);
-        tvDocumentResult = findViewById(R.id.tvDocumentResult);
+        btnDocumentHistory =
+                findViewById(R.id.btnDocumentHistory);
 
-        btnBackDocument = findViewById(R.id.btnBackDocument);
+        // =========================================
+        // QUICK TARGET BUTTONS
+        // =========================================
+
+
+
+        btnPreset50 =
+                findViewById(R.id.btnPreset50);
+
+        btnPreset100 =
+                findViewById(R.id.btnPreset100);
+
+        btnPreset200 =
+                findViewById(R.id.btnPreset200);
+
+        btnPreset300 =
+                findViewById(R.id.btnPreset300);
+
+        // =========================================
+        // SMART PRESETS
+        // =========================================
+
+        btnPreset500 =
+                findViewById(R.id.btnPreset500);
+
+        btnPreset1MB =
+                findViewById(R.id.btnPreset1MB);
+
+        btnEmailReady =
+                findViewById(R.id.btnEmailReady);
+
+        btnPresentation =
+                findViewById(R.id.btnPresentation);
+
+        btnUltraCompress =
+                findViewById(R.id.btnUltraCompress);
+        btnResume =
+                findViewById(R.id.btnResume);
+
+        btnAssignment =
+                findViewById(R.id.btnAssignment);
+
+        // =========================================
+        // SHARE / DOWNLOAD
+        // =========================================
+
+        btnDownloadDocument =
+                findViewById(R.id.btnDownloadDocument);
+
+        btnShareWhatsapp =
+                findViewById(R.id.btnShareWhatsapp);
+
+        btnShareGmail =
+                findViewById(R.id.btnShareGmail);
+
+        btnShareInstagram =
+                findViewById(R.id.btnShareInstagram);
+
+        btnShareMore =
+                findViewById(R.id.btnShareMore);
+
+        tvSelectedDocument =
+                findViewById(R.id.tvSelectedDocument);
+
+        tvDocumentResult =
+                findViewById(R.id.tvDocumentResult);
+
+        btnBackDocument =
+                findViewById(R.id.btnBackDocument);
 
         btnDownloadDocument.setEnabled(false);
+
         btnShareWhatsapp.setEnabled(false);
+
         btnShareGmail.setEnabled(false);
+
         btnShareInstagram.setEnabled(false);
+
         btnShareMore.setEnabled(false);
     }
-
     private void setupClickListeners() {
         btnBackDocument.setOnClickListener(v -> finish());
 
@@ -113,10 +188,54 @@ public class DocumentCompressorActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnPreset50.setOnClickListener(v -> etTargetSizeDocument.setText("50"));
-        btnPreset100.setOnClickListener(v -> etTargetSizeDocument.setText("100"));
-        btnPreset200.setOnClickListener(v -> etTargetSizeDocument.setText("200"));
-        btnPreset300.setOnClickListener(v -> etTargetSizeDocument.setText("300"));
+        btnPreset50.setOnClickListener(v ->
+                etTargetSizeDocument.setText("50"));
+
+        btnPreset100.setOnClickListener(v ->
+                etTargetSizeDocument.setText("100"));
+
+        btnPreset200.setOnClickListener(v ->
+                etTargetSizeDocument.setText("200"));
+
+        btnPreset300.setOnClickListener(v ->
+                etTargetSizeDocument.setText("300"));
+        btnPreset500.setOnClickListener(v ->
+                etTargetSizeDocument.setText("500"));
+
+        btnPreset1MB.setOnClickListener(v ->
+                etTargetSizeDocument.setText("1000"));
+
+
+// =========================================
+// SMART PRESETS
+// =========================================
+
+        btnEmailReady.setOnClickListener(v ->
+                etTargetSizeDocument.setText("100"));
+
+        btnResume.setOnClickListener(v ->
+                etTargetSizeDocument.setText("300"));
+
+        btnAssignment.setOnClickListener(v ->
+                etTargetSizeDocument.setText("500"));
+
+        btnPresentation.setOnClickListener(v ->
+                etTargetSizeDocument.setText("1000"));
+
+        btnUltraCompress.setOnClickListener(v ->
+                etTargetSizeDocument.setText("50"));
+
+// =========================================
+// SMART PRESETS
+// =========================================
+
+
+
+        btnResume.setOnClickListener(v ->
+                etTargetSizeDocument.setText("50"));
+
+        btnAssignment.setOnClickListener(v ->
+                etTargetSizeDocument.setText("100"));
 
         btnDownloadDocument.setOnClickListener(v -> {
             if (compressedDocumentId != null && compressedDocumentFileName != null) {

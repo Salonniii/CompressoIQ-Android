@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSelectImage, btnUpload, btnHistory, btnLogout;
     private Button btnPdfCompressor, btnWordCompressor, btnPptCompressor, btnExcelCompressor;
     private Button btnForm, btnEmail, btnWebsite, btnInstagram, btnWhatsapp, btnId, btnJob, btnAssignment;
+    private Button btn10KB, btn20KB;
     private Button btn50KB, btn100KB, btn200KB, btn500KB, btn1MB;
 
     private EditText etTargetSize;
@@ -144,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
         btnId = findViewById(R.id.btnId);
         btnJob = findViewById(R.id.btnJob);
         btnAssignment = findViewById(R.id.btnAssignment);
+        btn10KB = findViewById(R.id.btn10KB);
+        btn20KB = findViewById(R.id.btn20KB);
 
         btn50KB = findViewById(R.id.btn50KB);
         btn100KB = findViewById(R.id.btn100KB);
@@ -226,20 +229,49 @@ public class MainActivity extends AppCompatActivity {
         btnExcelCompressor.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, DocumentCompressorActivity.class)));
 
-        btnForm.setOnClickListener(v -> setPreset("FORM_UPLOAD", "JPG", "50"));
-        btnEmail.setOnClickListener(v -> setPreset("EMAIL", "JPG", "100"));
-        btnWebsite.setOnClickListener(v -> setPreset("WEBSITE", "JPG", "200"));
-        btnInstagram.setOnClickListener(v -> setPreset("INSTAGRAM", "JPG", "200"));
-        btnWhatsapp.setOnClickListener(v -> setPreset("WHATSAPP", "JPG", "100"));
-        btnId.setOnClickListener(v -> setPreset("ID_CARD", "JPG", "50"));
-        btnJob.setOnClickListener(v -> setPreset("JOB_PORTAL", "JPG", "100"));
-        btnAssignment.setOnClickListener(v -> setPreset("ASSIGNMENT", "JPG", "200"));
+        btnForm.setOnClickListener(v ->
+                setPreset("FORM_UPLOAD", "JPG", "20"));
 
-        btn50KB.setOnClickListener(v -> etTargetSize.setText("50"));
-        btn100KB.setOnClickListener(v -> etTargetSize.setText("100"));
-        btn200KB.setOnClickListener(v -> etTargetSize.setText("200"));
-        btn500KB.setOnClickListener(v -> etTargetSize.setText("500"));
-        btn1MB.setOnClickListener(v -> etTargetSize.setText("1024"));
+        btnEmail.setOnClickListener(v ->
+                setPreset("EMAIL", "JPG", "100"));
+
+        btnWebsite.setOnClickListener(v ->
+                setPreset("WEBSITE", "JPG", "200"));
+
+        btnInstagram.setOnClickListener(v ->
+                setPreset("INSTAGRAM", "JPG", "200"));
+
+        btnWhatsapp.setOnClickListener(v ->
+                setPreset("WHATSAPP", "JPG", "50"));
+
+        btnId.setOnClickListener(v ->
+                setPreset("ID_CARD", "JPG", "10"));
+
+        btnJob.setOnClickListener(v ->
+                setPreset("JOB_PORTAL", "JPG", "50"));
+
+        btnAssignment.setOnClickListener(v ->
+                setPreset("ASSIGNMENT", "JPG", "100"));
+        btn10KB.setOnClickListener(v ->
+                etTargetSize.setText("10"));
+
+        btn20KB.setOnClickListener(v ->
+                etTargetSize.setText("20"));
+
+        btn50KB.setOnClickListener(v ->
+                etTargetSize.setText("50"));
+
+        btn100KB.setOnClickListener(v ->
+                etTargetSize.setText("100"));
+
+        btn200KB.setOnClickListener(v ->
+                etTargetSize.setText("200"));
+
+        btn500KB.setOnClickListener(v ->
+                etTargetSize.setText("500"));
+
+        btn1MB.setOnClickListener(v ->
+                etTargetSize.setText("1024"));
 
         btnDownload.setOnClickListener(v -> {
             if (latestCompressedImageId != null) {

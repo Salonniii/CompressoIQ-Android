@@ -82,6 +82,7 @@
         </LinearLayout>
 
         <!-- TARGET SIZE CARD -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,12 +110,79 @@
                 android:inputType="number"
                 android:background="@drawable/bg_input_premium"
                 android:padding="16dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="18dp" />
+
+            <!-- SMART PRESETS -->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="📦 Quick Target Sizes"
+                android:text="⚡ Smart Presets"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="18dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btnResume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="📄 Resume"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp" />
+
+                    <Button
+                        android:id="@+id/btnAssignment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="📚 Assignment"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg" />
+                    <Button
+                        android:id="@+id/btnEmailReady"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="📧 Email"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <Button
+                        android:id="@+id/btnPresentation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="📊 PPT"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <Button
+                        android:id="@+id/btnUltraCompress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="🚀 Ultra"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- QUICK TARGET SIZES -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 Quick Compression"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:textSize="16sp"
@@ -163,8 +231,24 @@
                         android:layout_height="48dp"
                         android:text="300KB"
                         android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg" />
+
+                    <Button
+                        android:id="@+id/btnPreset500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="500KB"
+                        android:textColor="#FFFFFF"
                         android:background="@drawable/chip_bg"
-                        android:layout_marginEnd="10dp" />
+                        android:layout_marginEnd="10dp"/>
+
+                    <Button
+                        android:id="@+id/btnPreset1MB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="1MB"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/chip_bg"/>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -177,7 +261,8 @@
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:background="@drawable/bg_button_premium"
-                android:layout_marginTop="18dp" />
+                android:layout_marginTop="20dp" />
+
         </LinearLayout>
         <Button
             android:id="@+id/btnDocumentHistory"
